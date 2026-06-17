@@ -9,9 +9,14 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
-// function getHumanChoice () 
+function getHumanChoice() {
+    const humanChoice = prompt("Rock, paper, or scissors?")
+    return humanChoice 
+} 
+
+console.log(getHumanChoice());
 
 // const humanScore = ;
 // const computerScore = ;
