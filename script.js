@@ -16,9 +16,32 @@ function getHumanChoice() {
     return humanChoice 
 } 
 
-console.log(getHumanChoice());
+// console.log(getHumanChoice());
 
-// const humanScore = ;
-// const computerScore = ;
+let humanScore = 0;
+let computerScore = 0;
 
-// function playRound()
+function playRound(humanChoice, compChoice) {
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice === compChoice) {
+        console.log("Draw!")
+    }
+    else if (humanChoice === "rock" && compChoice === "scissors" ||
+        humanChoice === "paper" && compChoice === "rock" ||
+        humanChoice === "scissors" && compChoice === "paper"
+    ) {
+        humanScore++;
+        console.log("You win!"); 
+    }
+    else {
+        computerScore++;
+        console.log("You lose!");
+    }
+}
+
+// console.log(humanScore, computerScore);
+
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
+
+// playRound(humanSelection, computerSelection);
