@@ -18,10 +18,17 @@ function getHumanChoice() {
 
 // console.log(getHumanChoice());
 
-let humanScore = 0;
-let computerScore = 0;
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
 
-function playRound(humanChoice, compChoice) {
+// playRound(humanSelection, computerSelection);
+
+// console.log(humanScore, computerScore);
+
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+    function playRound(humanChoice, compChoice) {
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice === compChoice) {
         console.log("Draw!")
@@ -38,10 +45,40 @@ function playRound(humanChoice, compChoice) {
         console.log("You lose!");
     }
 }
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
 
-// console.log(humanScore, computerScore);
+playRound(humanSelection, computerSelection);
 
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
 
-// playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
+humanSelection = getHumanChoice();
+computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
+if (humanScore > computerScore) {
+    console.log("Human wins the game");
+}
+else if (computerScore > humanScore) {
+    console.log("Computer wins the game");
+}
+else {
+    console.log("The game is a draw");
+}
+}
+
+playGame();
